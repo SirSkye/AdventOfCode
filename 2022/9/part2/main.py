@@ -32,8 +32,7 @@ def move_tail(H:tuple, T: tuple) -> tuple:
     return T
 
 movements = read_data()
-tail = (0, 0)
-head = (0, 0)
+positions = [(0, 0) for x in range(10)]
 visited = set()
 
 for movement, steps in movements:
@@ -50,11 +49,12 @@ for movement, steps in movements:
             x = 1
     print(movement, steps)
     for _ in range(0, int(steps)):
-        head = (head[0] + x, head[1] + y)
-        print(head, tail, move_tail(head, tail))
-        tail = move_tail(head, tail)
-        visited.add(tail)
-        print()
+        positions[0] = (positions[0][0] + x, positions[0][1] + y)
+        for i in range(1, 10):
+            print(x)
+            positions[i] = move_tail(positions[i-1], positions[i])
+        print(positions)
+        visited.add(positions[9])
     
 print(visited)
 print(len(visited))
