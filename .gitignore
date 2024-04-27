@@ -1,5 +1,8 @@
 **\.txt
 **\.py
-!**\main.py
 **\.c
+**\.cpp
 **\.exe
+!**\main.py
+!**\main2.py
+!**\.main.cpp
