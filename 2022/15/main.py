@@ -1,6 +1,5 @@
 import re
 from collections import namedtuple
-from math import cos, sin
 
 Point = namedtuple("Point", ["x", "y"])
 
@@ -81,19 +80,7 @@ def part_2() -> Point:
 point_int = part_2()
 print(point_int)
 print(point_int.x * 4000000 + point_int.y)
-    
-# pairs = read()
-# pair = pairs[3]
-# print(pair)
-# sensor = pair[0]
-# beacon = pair[1]
-# r = abs(sensor.x - beacon.x) + abs(sensor.y - beacon.y)
-# print(sensor.x, sensor.y, r)
-# for x in range(max(0, r * -1 + sensor.x), min(20, r+1+sensor.x)):
-#     print(f"{x}: {gen_point(sensor, r, x)}")
 
-# for point in gen_point(sensor, r, 14):
-#     print(abs(sensor.x - point.x) + abs(sensor.y - point.y))
 
 
 
